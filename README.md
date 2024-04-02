@@ -17,7 +17,6 @@ Medical terms in rows of healthcare_only.csv are sparse and cannot contribute to
 - Vectorized the sentences in each row.\
 - Calculated similarity score between row with healthcare terms and all the rows from half_healthcare.csv\
 - Set the median of similarity score as threshold to separate healthcare and non-healthcare rows.
-- 
 
 ### *Model finetuning*
 
