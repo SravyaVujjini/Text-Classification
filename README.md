@@ -8,14 +8,17 @@ Medical terms in rows of healthcare_only.csv are sparse and cannot contribute to
 *   Based on keyword frequency
 *   Based on similariy between every 'text' row of 2 csv documents
 *   By creating concentrated healthcare data (implemented solution)
-
-
-Created data concentrated with medical terminology by joining text from all the rows of healthcare_only.csv and removing stopwords. This consolidated representation f health care realted documents emphasizes the distinctive vocabulary of the healthcare realted documents. By doing so, the resulting consolidated corpus becomes reference point for comparison with the mixed dataset containing both healthcare and non healthcare companies
+*   Created data concentrated with medical terminology by joining text from all the rows of healthcare_only.csv and removing stopwords.
+*   This consolidated representation emphasizes the distinctive vocabulary of the healthcare related documents.
+*   The idea is that the unique terminology and language patterns specific to healthcare will stand out, allowing for the identification of non health care companies based on the dissimilarity of the language
 
 ### *Healthcare and non-healthcare data detection*
-Vectorized the sentences in each row.\
-Calculated similarity score between row with healthcare terms and all the rows from half_healthcare.csv\
-Set the meadian of similarity score as threshold to separate healthcare and non-healthcare rows
+
+- Vectorized the sentences in each row.\
+- Calculated similarity score between row with healthcare terms and all the rows from half_healthcare.csv\
+- Set the median of similarity score as threshold to separate healthcare and non-healthcare rows.
+- 
 
 ### *Model finetuning*
-Finetuned the pretrained 'DistilBERT' model by traning for 3 epochs
+
+Finetuned the pretrained 'DistilBERT' model by traning for 3 epochs. 
